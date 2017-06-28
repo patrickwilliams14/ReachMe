@@ -36,10 +36,10 @@ h1, h2, h3 {
 
 // Home Page Styles
 
-.jumbotron {
+.head {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(desk.png);
   background-size: cover;
-  background-position: center;
+  //background-position: center;
   height: 100vh;  /*means 100% of the viewport. */
   background-attachment: fixed;
 }
@@ -49,8 +49,13 @@ h1, h2, h3 {
   h2 {
     line-height: 220%;
   }
-  
 }
+
+.export {
+  line-height: 200%;
+}
+    
+
 
 // Buttons
 .register {
@@ -73,3 +78,9 @@ h1, h2, h3 {
   }
 }
 
+// Icons
+
+.pdf-icon {
+  font-size: 350%;
+  color: black;
+}
