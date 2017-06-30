@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+  
+  # As soon as someone visits contact form page, this 'new' action gets run
+  # creates an empty object automatically
   def new
     @contact = Contact.new
   end
@@ -7,9 +10,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     
     if @contact.save
-      redirect_to new_contact_path, notice: "Message Sent"
+      flash[:success] = "Message Sent!"
+      redirect_to new_contact_path
     else
-      redirect_to new_contact_path, notice: "Error Occurred"
+      flash[:danger] = @contact.errors.full_messages.join(", ")
+      redirect_to new_contact_path
     end
   end
   
