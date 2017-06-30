@@ -30,9 +30,15 @@
     
     <div class="container">
       <% flash.each do |type, msg| %>
+        <!-- spit out content, the content is a div and w/e goes inside div is the msg
+        then the bootstrap alert and also which type of alert(success or danger) you want-->
         <%= content_tag :div, msg, class: "alert alert-#{type}" %>
       <% end %>
     </div>
     <%= yield %>
   </body>
 </html>
+
+<!-- doing the each loop to key/value pairs.  The flashes look like this:
+{key: value, key: value, key: value}  The word 'flash' refers to a list
+-->
