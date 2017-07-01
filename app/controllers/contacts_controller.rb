@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
       # Code right below: This is how we grab it..you use params to do this
       # This is how you lift from form fields in controller
       # Go into contact form after saved and grab all these form fields, assign to 
-      #variables and use in next line
+      # variables and use in next line
       name = params[:contact][:name]
       email = params[:contact][:email]
       body = params[:contact][:comments]
