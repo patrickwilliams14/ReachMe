@@ -22,9 +22,11 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
-
+  # Do not fallback to assets pipeline if a precompiled asset is missed. for the line right below this...26
+  # config.assets.compile = false
+  # Added these two lines below to show background image on production servers
+  config.serve_static_assets = true
+  config.assets.compile = true
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
