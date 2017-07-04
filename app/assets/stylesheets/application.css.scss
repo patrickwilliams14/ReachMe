@@ -10,8 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
 
 @import "bootstrap-sprockets";
@@ -38,11 +37,22 @@ h1, h2, h3 {
 
 .head {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(desk.png);
-  background-size: cover;
-  //background-position: center;
-  height: 100vh;  /*means 100% of the viewport. */
+  background-repeat:no-repeat;
+   -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
   background-attachment: fixed;
+  height: 100vh;  /*means 100% of the viewport. */
 }
+
+
+
+// background-size: cover;
+//   //background-position: center;
+//   height: 100vh;  /*means 100% of the viewport. */
+//   background-attachment: fixed;
 
 .callout-text {
   color: white;
