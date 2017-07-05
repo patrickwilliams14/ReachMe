@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # Then pointing to the contacts controller, new action
   
   # the 'new_contact' comes from routes file.  Do 'rails routes' and see prefix
+  # The as: new_contact is a path name to use in view file
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
 end
