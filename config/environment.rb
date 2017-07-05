@@ -9,7 +9,7 @@ ActionMailer::Base.smtp_settings = {
   :address        => ENV['MAILGUN_SMTP_SERVER'],
   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'arctic-beaver-76176.herokuapp.com',
+  :domain         => 'desolate-citadel-20768.herokuapp.com',
   :authentication => :plain,
 }
 ActionMailer::Base.delivery_method = :smtp
