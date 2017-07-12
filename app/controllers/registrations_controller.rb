@@ -7,7 +7,7 @@ class RegistrationsController < ApplicationController
     @register = Registration.new(register_params)
     
     if @register.save
-      flash[:success] = "Congratulations!  You registered your school for ReachMe!" <br> "You may now sign up and have your students sign up!"
+      flash[:success] = "Congratulations!  You registered your school for ReachMe!" <br> "School Counselors may sign up and have your students sign up!"
       redirect_to root_path
     end
   end
