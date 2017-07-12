@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
   
   get 'register-school', to: 'registrations#new', as: 'new_registration'
+  resources :registrations, only: :create
 end
