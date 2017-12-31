@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   # The 'as: new_contact' is a path name to use in view file
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
   
-  get 'register-school', to: 'registrations#new', as: 'new_registration'
-  resources :registrations, only: :create
+  get 'register-school', to: 'school_registrations#new', as: 'new_registration'
+  resources :school_registrations, only: :create
 end
