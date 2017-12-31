@@ -9,17 +9,32 @@
       <div class="well">
           
         <%= form_for @register do |f| %>
-        
+          
           <div class="form-group">
-            <%= f.label :school_district_name %>
-            <%= f.text_field :school_district_name, class: 'form-control' %>
+            <%= f.label :name_of_person_completing_form %>
+            <%= f.text_field :name_of_person_completing_form, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :role_in_school %>
+            <%= f.text_field :role_in_school, placeholder: "Ex: School Counselor, Assistant Principal", class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :school_name %>
+            <%= f.text_field :school_name, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :grade_levels %>
+            <%= f.text_field :grade_levels, placeholder: "Ex: 9-12, 6-8, 6-12", class: 'form-control' %>
           </div>
           
           <div class="form-group">
             <%= f.label :street_name %>
             <%= f.text_field :street_name, placeholder: "Ex: 123 School Drive", class: 'form-control' %>
           </div>
-          
+      
           <div class="form-group">
             <%= f.label :city %>
             <%= f.text_field :city, class: 'form-control' %>
@@ -27,7 +42,7 @@
           
            <div class="form-group">
             <%= f.label :state %>
-            <%= f.text_field :state, class: 'form-control' %>
+            <%= f.text_field :state, placeholder: "Ex: Virginia, Pennsylvania, California", class: 'form-control' %>
           </div>
           
           <div class="form-group">

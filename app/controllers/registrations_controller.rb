@@ -1,6 +1,11 @@
 class RegistrationsController < ApplicationController
+  
   def new
+<<<<<<< HEAD
     @register = Registration.new
+=======
+   
+>>>>>>> user_memberships
   end
   
   def create
