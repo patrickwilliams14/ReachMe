@@ -25,9 +25,15 @@
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li> <%= link_to "Sign In", new_user_registration_path %></li>
-            <li> <%= link_to "Sign Up", new_registration_path %></li>
-            <li> <%= link_to "Contact Us", new_contact_path, class: 'btn btn-primary btn-lg' %></li>
+            <% if user_signed_in? %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+            <% else %>
+              <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
+              <%= link_to "Create Account", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+            <% end %>
+            
+            <li> <%= link_to "Register Your School", new_registration_path %></li>
+            <li> <%= link_to "Contact Us", new_contact_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -40,9 +46,10 @@
         <%= content_tag :div, msg, class: "alert alert-#{type}" %>
       <% end %>
     </div>
-    
+    <!--
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    -->
       
     <%= yield %>
   </body>
