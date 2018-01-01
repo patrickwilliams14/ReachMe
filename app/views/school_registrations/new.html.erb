@@ -1,52 +1,52 @@
 <div class="container">
   <div class="row">
-    <h3 class="text-center">Register Your School Today!</h3>
-    <p class="text-center">A few steps away and your student's
-    needs will be right in front of you!  This is a monthly subsciption!</p>
+    <h1 class="text-center">Register Your School Today!</h1>
+    <h4 class="text-center">A few steps away and your student's
+    needs will be right in front of you!  This is a monthly subsciption!</h4>
     
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
         
       <div class="well">
           
         <%= form_for @register do |f| %>
           
           <div class="form-group">
-            <%= f.label :name_of_person_completing_form %>
+            <%= f.label :name_of_person_completing_form, "Name of Person Completing Form" %>
             <%= f.text_field :name_of_person_completing_form, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :role_in_school %>
+            <%= f.label :role_in_school, "Role in School" %>
             <%= f.text_field :role_in_school, placeholder: "Ex: School Counselor, Assistant Principal", class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :school_name %>
+            <%= f.label :school_name, "School Name" %>
             <%= f.text_field :school_name, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :grade_levels %>
+            <%= f.label :grade_levels, "Grade Levels" %>
             <%= f.text_field :grade_levels, placeholder: "Ex: 9-12, 6-8, 6-12", class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :street_name %>
+            <%= f.label :street_name, "Street Name" %>
             <%= f.text_field :street_name, placeholder: "Ex: 123 School Drive", class: 'form-control' %>
           </div>
       
           <div class="form-group">
-            <%= f.label :city %>
+            <%= f.label :city, "City" %>
             <%= f.text_field :city, class: 'form-control' %>
           </div>
           
            <div class="form-group">
-            <%= f.label :state %>
+            <%= f.label :state, "State" %>
             <%= f.text_field :state, placeholder: "Ex: Virginia, Pennsylvania, California", class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :zip_code %>
+            <%= f.label :zip_code, "Zip Code" %>
             <%= f.text_field :zip_code, class: 'form-control' %>
           </div>
           
