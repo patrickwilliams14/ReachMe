@@ -5,6 +5,6 @@ class SchoolRegistration < ApplicationRecord
   validates :grade_levels, presence: true
   validates :street_name, presence: true
   validates :city, presence: true
-  validates :state, presence: true
+  validates :state, presence: trueSchool
   validates :zip_code, presence: true
 end
