@@ -9,7 +9,7 @@ class SchoolRegistrationsController < ApplicationController
     
     if @register.save
       flash[:success] = "Congratulations!  You registered your school for ReachMe!  School Counselors may sign up and have your students sign up!"
-      redirect_to root_path
+      redirect_to new_user_registration_path
       
     else
       flash[:danger] = @register.errors.full_messages.join(", ")

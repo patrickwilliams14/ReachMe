@@ -34,7 +34,6 @@ h1, h2, h3 {
 }
 
 // Home Page Styles
-
 .head {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(desk.png);
   background-repeat:no-repeat;
@@ -93,4 +92,11 @@ h1, h2, h3 {
 .pdf-icon {
   font-size: 350%;
   color: black;
+}
+
+// Flash
+.flash-container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
