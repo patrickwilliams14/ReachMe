@@ -1,5 +1,6 @@
 class SchoolRegistration < ApplicationRecord
   validates :name_of_person_completing_form, presence: true
+  validates :email, presence: true
   validates :role_in_school, presence: true
   validates :school_name, presence: true
   validates :grade_levels, presence: true

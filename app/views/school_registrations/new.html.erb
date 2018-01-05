@@ -16,6 +16,11 @@
           </div>
           
           <div class="form-group">
+            <%= f.label :email, "Your Email" %>
+            <%= f.text_field :email, placeholder: "Ex: schoolcounselor@school.com", class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
             <%= f.label :role_in_school, "Role in School" %>
             <%= f.text_field :role_in_school, placeholder: "Ex: School Counselor, Assistant Principal", class: 'form-control' %>
           </div>
