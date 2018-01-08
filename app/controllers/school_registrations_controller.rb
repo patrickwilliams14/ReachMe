@@ -6,8 +6,8 @@ class SchoolRegistrationsController < ApplicationController
   
   def create
     @register = SchoolRegistration.new(register_params)
-    
-    if @register.save
+  
+    if @register.save_with_subscription
       flash[:success] = "Congratulations!  You registered your school for ReachMe!  School Counselors may sign up and have your students sign up!"
       redirect_to new_user_registration_path
       
@@ -19,6 +19,6 @@ class SchoolRegistrationsController < ApplicationController
   
   private
     def register_params
-      params.require(:school_registration).permit(:name_of_person_completing_form, :role_in_school, :school_name, :grade_levels, :street_name, :city, :state, :zip_code)
+      params.require(:school_registration).permit(:name_of_person_completing_form, :email, :role_in_school, :school_name, :grade_levels, :street_name, :city, :state, :zip_code)
     end
 end
