@@ -13,10 +13,11 @@ class SchoolRegistration < ApplicationRecord
   
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, id: "reachme", source: stripeToken)
+      customer = Stripe::Customer.create(description: email, plan: plan_name, source: stripeToken)
         # This will make a call to stripe server and charge their card then create subscription
         self.stripe_customer_token = customer.id
         # self means user here
+    
         save!
         # This runs save on the spot and sends it to the database
     end
