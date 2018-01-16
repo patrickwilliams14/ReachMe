@@ -10,6 +10,8 @@
           
         <%= form_for @register, html: {id: 'payment-form'} do |f| %>
           
+          <%= hidden_field_tag 'plan', params[:plan] %>
+          
           <div class="form-group">
             <%= f.label :name_of_person_completing_form, "Name of Person Completing Form" %>
             <%= f.text_field :name_of_person_completing_form, class: 'form-control' %>

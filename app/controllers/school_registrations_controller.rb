@@ -6,7 +6,7 @@ class SchoolRegistrationsController < ApplicationController
   
   def create
     @register = SchoolRegistration.new(register_params)
-  
+    
     if @register.save_with_subscription
       flash[:success] = "Congratulations!  You registered your school for ReachMe!  School Counselors may sign up and have your students sign up!"
       redirect_to new_user_registration_path
